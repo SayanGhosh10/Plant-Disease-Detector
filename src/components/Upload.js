@@ -33,14 +33,17 @@ let stl = {
   color : 'white',
 }
   return (
-    <div>
-        <h1 className="my-5" style={stl} >Analye your Plant here</h1>
+    <div className='container'>
+      
+        <h1 className="my-5" style={stl} >Analyze your Plant here</h1>
             <div className="mb-3">
                     <label htmlFor="exampleFormControlTextarea1" className="form-label" style={stl}>Name of Plant</label>
                     <input className="form-control" type="text" placeholder="" aria-label="default input example"/>
             </div>
             <div className="mb-3">
+            <form className="row g-3 my-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label" style={stl}>Enter Location</label>
+            
             <div className="col-md-6">
                 <label htmlFor="inputState" className="form-label" style={stl}>State</label>
                 <select id="inputState" className="form-select">
@@ -59,6 +62,7 @@ let stl = {
                 <option>Hoogly</option>
                 </select>
             </div>
+            </form>
             </div>
             <div>
               <p style={stl}>Upload Image</p>
@@ -67,6 +71,7 @@ let stl = {
               <img  style={myStyle} className='image my-5' src={file} />
               </div>
             </div>
+            
             <button type="submit" onClick={passAlert} className="my-3 btn btn-success text-center">Analyze</button>
     </div>
   )

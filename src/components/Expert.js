@@ -23,7 +23,7 @@ let stl = {
             </div>
             <div className="col-md-6">
                 <label htmlFor="inputEmail4" className="form-label" style={stl}>Email</label>
-                <input type="email" className="form-control" id="inputEmail4"/>
+                <input type="email" className="form-control" id="inputEmail4" placeholder="abc@gmail.com"/>
             </div>
             <div className="col-md-6">
                 <label htmlFor="inputPassword4" className="form-label" style={stl}>Password</label>
@@ -37,8 +37,10 @@ let stl = {
                 <label htmlFor="inputAddress2" className="form-label" style={stl}>Landmark</label>
                 <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, Store, or Club"/>
             </div>
-            <label htmlFor="exampleFormControlTextarea1" className="form-label" style={stl}>Qualifications</label>
-                    <input className="form-control" type="text" placeholder="" aria-label="default input example"/>
+            <div className="col-12">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label" style={stl}>Qualifications</label>
+                <input className="form-control" type="text" placeholder="" aria-label="default input example"/>
+            </div>
             <div className="col-md-6">
                 <label htmlFor="inputCity" className="form-label" style={stl}>City</label>
                 <select id="inputCity" className="form-select">

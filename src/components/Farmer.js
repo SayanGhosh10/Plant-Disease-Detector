@@ -23,7 +23,7 @@ let stl = {
             </div>
             <div className="col-md-6">
                 <label htmlFor="inputEmail4" className="form-label" style={stl}>Email</label>
-                <input type="email" className="form-control" id="inputEmail4"/>
+                <input type="email" className="form-control" id="inputEmail4" placeholder="abc@gmail.com"/>
             </div>
             <div className="col-md-6">
                 <label htmlFor="inputPassword4" className="form-label" style={stl}>Password</label>

@@ -29,9 +29,11 @@ function App() {
   }
   let myStyle = {
     backgroundImage : `url("/farm4.jpg")`,
-    height:'200vh',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    width: '100%',
+    minHeight: '100vh',
   }
   return (
       <div style={myStyle}>
