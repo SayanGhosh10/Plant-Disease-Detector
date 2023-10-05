@@ -32,7 +32,6 @@ function App() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
-    width: '100%',
     minHeight: '100vh',
   }
   return (

@@ -7,7 +7,7 @@ function About() {
   return (
     <div>
       <h1 style={stl}>About us</h1>
-      <p className='my-5' style={stl}>
+      <p style={stl}>
         Our cutting-edge agricultural solution brings together two crucial stakeholders:
         Farmers and Agricultural Experts. This innovative app and web-based platform
         empower farmers to combat crop diseases effectively while harnessing the
@@ -20,6 +20,10 @@ function About() {
         Anticipating the future, we are committed to enhancing user-friendliness. We plan
         to introduce discussion forums for issue-specific collaboration among users and
         implement multilingual support for broader accessibility.
+        For the initial six months, we are delighted to offer this service free of charge,
+        enabling farmers to experience its transformative benefits. Beyond this period, a
+        subscription fee will be introduced to sustain and enhance the platform's
+        capabilities.
       </p>
     </div>
   )

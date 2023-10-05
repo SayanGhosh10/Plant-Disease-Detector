@@ -14,20 +14,10 @@ function Upload(props) {
   const passAlert = () => {
     props.showAlert("Your Picture is being analyzed", "success");
 }
-const mediaQueries = {
-  desktop: '@media (min-width: 1024px)',
-  android : '@media (max-width: 768px)',
-};
 let myStyle = {
   width: "50%",
   position: "center",
   maxWidth: "500px",
-}
-if (window.matchMedia(mediaQueries.desktop).matches) {
-  myStyle.maxWidth = '800px';
-}
-if (window.matchMedia(mediaQueries.android).matches) {
-  myStyle.maxWidth = '250px';
 }
 let stl = {
   color : 'white',
