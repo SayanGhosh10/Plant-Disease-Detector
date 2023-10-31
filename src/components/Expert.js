@@ -43,8 +43,8 @@ function Expert(props) {
     return (
         <div>
             <div className="container">
-                <h1 className='mt-3' style={{  color: 'white' }}>Please fill your details</h1>
-                <h1 className='mt-3' style={{  color: 'white' }}>Expert Section</h1>
+                <h1 className='mt-3' style={{ color: 'white' }}>Please fill your details</h1>
+                <h1 className='mt-3' style={{ color: 'white' }}>Expert Section</h1>
                 <form className="row g-3 my-3" onSubmit={handleSubmit}>
                     <div className="row g-3">
                         <div className="col">

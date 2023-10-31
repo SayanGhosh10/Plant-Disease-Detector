@@ -31,7 +31,7 @@ function Upload(props) {
     if (!localStorage.getItem('token')) {
       navigate("/login");
     }
-})
+  })
   return (
     <div className='container'>
 

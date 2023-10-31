@@ -43,8 +43,8 @@ function Farmer(props) {
     return (
         <div>
             <div className="container">
-                <h1 className='my-3' style={{  color: 'white' }}>Please fill your details</h1>
-                <h1 className='my-3' style={{  color: 'white' }}>User Section</h1>
+                <h1 className='my-3' style={{ color: 'white' }}>Please fill your details</h1>
+                <h1 className='my-3' style={{ color: 'white' }}>User Section</h1>
                 <form className="row g-3 my-3" onSubmit={handleSubmit}>
                     <div className="row g-3">
                         <div className="col">

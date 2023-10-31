@@ -45,7 +45,7 @@ function App() {
           <Routes>
             {/* <Route path="/" element = {<Landing/>}/> */}
             <Route exact path="/login" element={<Login showAlert={showAlert} />} />
-            <Route exact path="/signup" element={<Signup  />} />
+            <Route exact path="/signup" element={<Signup />} />
             <Route path='/user' element={<Farmer showAlert={showAlert} />} />
             <Route path='/expert' element={<Expert showAlert={showAlert} />} />
             <Route exact path="/about" element={<About />} />

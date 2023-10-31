@@ -19,7 +19,7 @@ const Userchema = new Schema({
         type: Date,
         default: Date.now
     }
-  });
+});
 
-  const User = mongoose.model('user', Userchema);
+const User = mongoose.model('user', Userchema);
 module.exports = User;

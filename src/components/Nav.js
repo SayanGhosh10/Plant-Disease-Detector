@@ -26,9 +26,9 @@ export default function Nav() {
               </li> */}
             </ul>
             {!localStorage.getItem('token') ? <form className='d-flex'>
-                        <Link className="btn btn-success " role="button" to="/login">Login</Link>
-                        <Link className="btn btn-success mx-2" role="button" to="/signup">Sign-up</Link>
-                    </form> : <Link className="btn btn-success " role="button" to="/login" onClick={() => { localStorage.removeItem('token') }}>Logout</Link>}
+              <Link className="btn btn-success " role="button" to="/login">Login</Link>
+              <Link className="btn btn-success mx-2" role="button" to="/signup">Sign-up</Link>
+            </form> : <Link className="btn btn-success " role="button" to="/login" onClick={() => { localStorage.removeItem('token') }}>Logout</Link>}
             {/* <form className="d-flex" role="search" >
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{color: "black", backgroundColor : "white"}}/>
               <button className="btn btn-outline-success" type="submit">Search</button>
