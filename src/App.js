@@ -1,6 +1,6 @@
 import './App.css';
 import Nav from './components/Nav';
-import Forms from './components/Forms';
+import Signup from './components/Signup';
 import {
   BrowserRouter as Router,
   // Switch,
@@ -15,9 +15,10 @@ import About from './components/About';
 // import Landing from './components/Landing';
 import Farmer from './components/Farmer';
 import Expert from './components/Expert';
+import Login from './components/Login';
 
 function App() {
-  const [alert, setAlert] =  useState(null);
+  const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {
     setAlert({
       msg: message,
@@ -28,29 +29,31 @@ function App() {
     }, 2000);
   }
   let myStyle = {
-    backgroundImage : `url("/farm4.jpg")`,
+    backgroundImage: `url("/farm4.jpg")`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
     minHeight: '100vh',
   }
+
   return (
-      <div style={myStyle}>
-            <Router >
-                <Nav/>
-                <Alert alert = {alert}/>
-                <div className="container" style={{backgroundColor : "transparent"}}>
-                    <Routes>
-                          {/* <Route path="/" element = {<Landing/>}/> */}
-                          <Route path='/user' element={<Farmer showAlert = {showAlert} />}/>
-                          <Route exact path="/login" element = {<Forms/>}/>
-                          <Route path='/expert' element={<Expert showAlert = {showAlert} />}/>
-                          <Route exact path="/about" element = {<About/>}/>
-                          <Route exact path="/" element = {<Upload showAlert = {showAlert}/>}/>
-                      </Routes>
-                  </div>
-              </Router>
-      </div>
+    <div style={myStyle}>
+      <Router >
+        <Nav />
+        <Alert alert={alert} />
+        <div className="container" style={{ backgroundColor: "transparent" }}>
+          <Routes>
+            {/* <Route path="/" element = {<Landing/>}/> */}
+            <Route exact path="/login" element={<Login showAlert={showAlert} />} />
+            <Route exact path="/signup" element={<Signup  />} />
+            <Route path='/user' element={<Farmer showAlert={showAlert} />} />
+            <Route path='/expert' element={<Expert showAlert={showAlert} />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/" element={<Upload showAlert={showAlert} />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
 

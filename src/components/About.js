@@ -2,10 +2,10 @@ import React from 'react'
 
 function About() {
   let stl = {
-    color : 'white',
+    color: 'white',
   }
   return (
-    <div>
+    <div className='container my-3'>
       <h1 style={stl}>About us</h1>
       <p style={stl}>
         Our cutting-edge agricultural solution brings together two crucial stakeholders:
