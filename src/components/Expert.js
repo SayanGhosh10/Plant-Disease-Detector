@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Indian_states_cities_list from "indian-states-cities-list";
 
 function Expert(props) {
+    //backend
     const [credential, setCredential] = useState({ name: "", email: "", password: "" })
 
     let navigate = useNavigate();
@@ -30,21 +31,30 @@ function Expert(props) {
     }
 
     const [state, setState] = useState("WestBengal");
-    const passAlert = () => {
-        props.showAlert("Your form has been submitted", "success");
+
+    const onChange = (e) => {
+        setCredential({ ...credential, [e.target.name]: e.target.value })
     }
+    //backend
+
     let stl = {
         color: 'white',
     }
-    const onChange = (e) => {
-        setCredential({ ...credential, [e.target.name]: e.target.value })
+    const [file, setFile] = useState(null);
+    function handleChange(e) {
+        console.log(e.target.files);
+        if (e.target.files[0]) {
+            setFile(URL.createObjectURL(e.target.files[0]));
+        }
+        else {
+            setFile(null);
+        }
     }
 
     return (
         <div>
             <div className="container">
                 <h1 className='mt-3' style={{ color: 'white' }}>Please fill your details</h1>
-                <h1 className='mt-3' style={{ color: 'white' }}>Expert Section</h1>
                 <form className="row g-3 my-3" onSubmit={handleSubmit}>
                     <div className="row g-3">
                         <div className="col">
@@ -70,10 +80,12 @@ function Expert(props) {
                         <label htmlFor="inputAddress2" className="form-label" style={stl}>Landmark</label>
                         <input type="text" className="form-control" id="inputAddress2" placeholder="Apartment, Store, or Club" />
                     </div>
-                    <div className="col-12">
+                    {props.user === "expert" ? <div className="col-12">
                         <label htmlFor="exampleFormControlTextarea1" className="form-label" style={stl}>Qualifications</label>
                         <input className="form-control" type="text" placeholder="" aria-label="default input example" required />
-                    </div>
+                        <p className="my-2 form-label" style={stl}>Upload Certificate</p>
+                        <input className="form-control" type="file" onChange={handleChange} required />
+                    </div> : null}
                     <div className="col-md-4">
                         <label htmlFor="inputState" className="form-label" style={stl}>State</label>
                         <select id="inputState" className="form-select" onChange={(e) => { setState(e.target.value) }}>
@@ -95,7 +107,7 @@ function Expert(props) {
                     <div className="col-12">
                     </div>
                     <div className="col-12">
-                        <button type="submit" onClick={passAlert} className="my-3 btn btn-success">Sign Up</button>
+                        <button type="submit" className="my-3 btn btn-success">Sign Up</button>
                     </div>
                 </form>
             </div>

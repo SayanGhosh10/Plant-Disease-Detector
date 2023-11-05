@@ -3,17 +3,14 @@ import Nav from './components/Nav';
 import Signup from './components/Signup';
 import {
   BrowserRouter as Router,
-  // Switch,
   Route,
   Routes,
-  // Link
 } from "react-router-dom";
 import { useState } from 'react';
 import Alert from './components/Alert';
 import Upload from './components/Upload';
 import About from './components/About';
 // import Landing from './components/Landing';
-import Farmer from './components/Farmer';
 import Expert from './components/Expert';
 import Login from './components/Login';
 
@@ -35,6 +32,10 @@ function App() {
     position: 'relative',
     minHeight: '100vh',
   }
+  const [user, setUser] = useState("farmer")
+  const changeUser = (us) => {
+    setUser(us);
+  }
 
   return (
     <div style={myStyle}>
@@ -45,9 +46,8 @@ function App() {
           <Routes>
             {/* <Route path="/" element = {<Landing/>}/> */}
             <Route exact path="/login" element={<Login showAlert={showAlert} />} />
-            <Route exact path="/signup" element={<Signup />} />
-            <Route path='/user' element={<Farmer showAlert={showAlert} />} />
-            <Route path='/expert' element={<Expert showAlert={showAlert} />} />
+            <Route exact path="/signup" element={<Signup changeUser={changeUser} />} />
+            <Route path='/expert' element={<Expert user={user} showAlert={showAlert} />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/" element={<Upload showAlert={showAlert} />} />
           </Routes>
