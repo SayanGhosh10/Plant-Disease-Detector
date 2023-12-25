@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-export default function Forms(props) {
+export default function Signup(props) {
     let stl = {
         width: '20vh', height: '20vh'
     }
