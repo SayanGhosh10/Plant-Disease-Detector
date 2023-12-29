@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoURI = "mongodb://0.0.0.0:27017/plant?directConnection=true"
+const mongoURI = process.env.MONGO_URI
 
 const connectTOMongo = () => {
     mongoose.connect(mongoURI);
