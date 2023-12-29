@@ -13,6 +13,6 @@ app.use(express.json())
 app.use('/api/auth', require('./routes/auth'))
 
 app.listen(port, () => {
-  console.log(`iNotebbok backend listening at http://localhost:${port}`)
+  console.log(`backend listening at http://localhost:${port}`)
 })
 
